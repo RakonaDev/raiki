@@ -24,12 +24,12 @@ function Cabecera() {
   }, [])
 
   return (
-    <header className="cabeceraScroll-container fixed-top w-100" id="header-container">
-      <nav className={ windowWidth <= 750 ? "nav-cabecera responsive ps-4 pe-2" : "nav-cabecera" }>
-        <div className="logo-container">
+    <header className="cabeceraScroll-container fixed-top" id="header-container">
+      <nav className={ windowWidth <= 750 ? "nav-cabecera responsive" : "nav-cabecera" }>
+        <div className={windowWidth <= 750 ? "logo-container ms-5" : "logo-container"}>
           <img src={raikiLogo} alt="raikiLogo" />
         </div>
-        { windowWidth > 750 ? <Nav/> : <NavResponsive/> }
+        { windowWidth > 750 ? <Nav/> : <NavResponsive width={windowWidth}/> }
         { windowWidth > 1050 ? <Redes/> : <RedesResponsive/>  }
       </nav>
     </header>
