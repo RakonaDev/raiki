@@ -16,7 +16,7 @@ function NavResponsive() {
   return (
     <>
       <button type="button" className="nav-button bg-body-secondary" onClick={() => switchNav()}>
-        <i className="fa-solid fa-bars fs-5"></i>
+        <i className="fa-solid fa-bars fs-5 text-black"></i>
       </button>
       <ul className={mostrar ? 'nav-container responsive text-bg-dark mostrar ' : 'nav-container responsive text-bg-dark'}>
         <li className='nav-item responsive'>

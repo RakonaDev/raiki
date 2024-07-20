@@ -25,7 +25,7 @@ function Cabecera() {
 
   return (
     <header className="cabeceraScroll-container fixed-top w-100" id="header-container">
-      <nav className={ windowWidth <= 750 ? "nav-cabecera responsive" : "nav-cabecera" }>
+      <nav className={ windowWidth <= 750 ? "nav-cabecera responsive ps-4 pe-2" : "nav-cabecera" }>
         <div className="logo-container">
           <img src={raikiLogo} alt="raikiLogo" />
         </div>
