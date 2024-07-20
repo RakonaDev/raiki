@@ -1,0 +1,24 @@
+.redes-button{
+  position: absolute;
+  right: 15px;
+  top: 93dvh;
+
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 0px;
+  color: white;
+  transition: background-color 0.5s;
+  transition-property: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.click{
+    transform: rotate(135deg);
+  }
+
+  &:hover{
+    background-color: #606060;
+  }
+}
