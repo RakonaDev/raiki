@@ -20,25 +20,25 @@ function NavResponsive() {
       </button>
       <ul className={mostrar ? 'nav-container responsive text-bg-dark mostrar ' : 'nav-container responsive text-bg-dark'}>
         <li className='nav-item responsive'>
-          <a href="#" className='nav-link responsive d-flex gap-2 align-items-center ps-3'>
+          <a href="#" className='nav-link responsive d-flex gap-2 align-items-center ps-4'>
             <span className='text-light'>Inicio</span>
             <Home/>
           </a>
         </li>
         <li className='nav-item responsive'>
-          <a href="#" className='nav-link responsive d-flex gap-2 align-items-center ps-3'>
+          <a href="#" className='nav-link responsive d-flex gap-2 align-items-center ps-4'>
             <span className='text-light'>Nosotros</span>
             <Nosotros/>
           </a>
         </li>
         <li className='nav-item responsive'>
-          <a href="#" className='nav-link responsive d-flex gap-2 align-items-center ps-3'>
+          <a href="#" className='nav-link responsive d-flex gap-2 align-items-center ps-4'>
             <span className='text-light fs-6'>Portafolio</span>
             <PortafolioIcon/>
           </a>
         </li>
         <li className='nav-item responsive'>
-          <a href="#" className='nav-link responsive d-flex gap-2 align-items-center ps-3'>
+          <a href="#" className='nav-link responsive d-flex gap-2 align-items-center ps-4'>
             <span className='text-light'>Servicios</span>
             <ServicioIcon/>
           </a>

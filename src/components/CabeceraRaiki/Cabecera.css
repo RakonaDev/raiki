@@ -18,10 +18,6 @@
   background-color: white;
 
   &.responsive{
-    /*
-    padding-left: 35px;
-    padding-right: 15px;
-    */
     justify-content: space-between;
   }
 }

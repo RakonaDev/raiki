@@ -11,7 +11,7 @@ function RedesResponsive() {
 
   return (
     <>
-      <button type='button' className={mostrar ? 'redes-button click text-bg-dark': 'redes-button text-bg-dark'} onClick={() => handleButton()}>
+      <button type='button' data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Ver Redes" className={mostrar ? 'redes-button click text-bg-dark': 'redes-button text-bg-dark'} onClick={() => handleButton()}>
         <i className="fa-solid fa-plus fs-5"></i>
       </button>
     </>

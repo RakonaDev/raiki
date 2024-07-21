@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+.header-body{
+  position: relative;
+  background-color: #E7E7E7;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  >p{
+    font-family: 'K2D';
+    font-weight: 400;
+    text-align: center;
+    width: 600px;
+    animation: opacity 1s;
+  }
+}
+
+.header-body{
+  .bola-chiquita{
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #E94649;
+    animation: flying 2.5s alternate infinite;
+
+    &.izquierda{
+      left: 90px;
+      top: 7rem;
+    }
+    &.derecha{
+      right: 0;
+      bottom: 250px;
+    }
+  }
+  .bola-mediana{
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #E94649;
+    animation: flying 3s alternate infinite;
+
+    &.izquierda{
+      top: 240px;
+      left: 110px;
+    }
+
+    &.derecha{
+      bottom: 100px;
+      right: -15px;
+    }
+  }
+  .bola-grande{
+    position: absolute;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: #E94649;
+    animation: flying 3.5s alternate infinite;
+
+    &.izquierda{
+      top: 190px;
+      left: -20px;
+    }
+
+    &.derecha{
+      right: 100px;
+      bottom: 140px;
+    }
+  }
+}
+
+.header-body .Layer_1{
+  width: 18%;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  animation: flying 3s alternate infinite;
+}
+
+.header-body .Layer_2{
+  width: 25%;
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+  animation: flying 3s alternate infinite;
+}
+
+.marcas-container{
+  background-color: #D9D9D9;
+}
+
+.marcas-container .marca-titulo{
+  >p{
+    width: 400px;
+    text-align: center;
+    font-family: 'K2D';
+    font-weight: 400;
+  }
+}
+
+.marcas-container .marca-article{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .marca{
+    width: 380px;
+    height: 200px;
+
+    .cuerpo-marca{
+      display: flex;
+      justify-content: center;
+      >p{
+        font-weight: 400;
+        font-family: 'K2D', sans-serif;
+        text-align: center;
+        width: 280px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@keyframes flying {
+  0%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(20px);
+  }
+}
+
+@keyframes opacity {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
