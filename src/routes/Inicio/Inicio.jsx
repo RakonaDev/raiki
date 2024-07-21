@@ -1,11 +1,31 @@
 import "./Inicio.css";
 import Layer_1 from "../../assets/Layer_1.svg";
 import Layer_2 from "../../assets/Layer_2.svg";
+
+import Picture1 from "../../assets/picture1.png";
+import Picture2 from "../../assets/picture2.png";
+import Picture3 from "../../assets/picture3.png";
+import Picture4 from "../../assets/picture4.png";
+import Picture5 from "../../assets/picture5.png";
+
 import Marca1Icon from "../../iconos/Marca1";
 import Marca2Icon from "../../iconos/Marca2";
 import Marca3Icon from "../../iconos/Marca3";
+import { useEffect } from "react";
+import ScrollCarousel from "scroll-carousel";
 
 function Inicio() {
+
+  useEffect(() => {
+
+    new ScrollCarousel(".my-carousel", {
+      speed: 10,
+      smartSpeed: true,
+      autoplay: true,
+    })
+
+  },[])
+
   return (
     <>
       <section className="w-100 header-body">
@@ -54,6 +74,25 @@ function Inicio() {
             </div>
           </div>
         </article>
+        <main className="w-100 proyectos-container">
+          <div className="my-carousel">
+            <div className="my-slide">
+              <img src={Picture1} alt="" className="imagen-ejemplo"/>
+            </div>
+            <div className="my-slide">
+              <img src={Picture2} alt="" className="imagen-ejemplo"/>
+            </div>
+            <div className="my-slide">
+              <img src={Picture3} alt="" className="imagen-ejemplo"/>
+            </div>
+            <div className="my-slide">
+              <img src={Picture4} alt="" className="imagen-ejemplo"/>
+            </div>
+            <div className="my-slide">
+              <img src={Picture5} alt="" className="imagen-ejemplo"/>
+            </div>
+          </div>
+        </main>
       </section>
     </>
   );
