@@ -1,0 +1,29 @@
+.personaje-item{
+  position: relative;
+  width: 300px;
+  height: max-content;
+
+  .personaje-cabecera{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .personaje-imagen{
+      background-color: #e2e2e2;
+    }
+  }
+
+  .personaje-cuerpo{
+    width: 100%;
+
+    >p:nth-child(1){
+      margin-top: 10px;
+      text-align: center;
+      font-weight: 600;
+    }
+    >p:nth-child(2){
+      text-align: center;
+      transform: translateY(-15px);
+    }
+  }
+}

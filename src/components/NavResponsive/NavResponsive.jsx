@@ -4,6 +4,7 @@ import Nosotros from '../../iconos/Nosotros'
 import PortafolioIcon from '../../iconos/Portafolio'
 import ServicioIcon from '../../iconos/Servicios'
 import './NavResponsive.css'
+import { NavLink } from 'react-router-dom'
 
 function NavResponsive() {
 
@@ -20,28 +21,28 @@ function NavResponsive() {
       </button>
       <ul className={mostrar ? 'nav-container responsive text-bg-dark mostrar ' : 'nav-container responsive text-bg-dark'}>
         <li className='nav-item responsive'>
-          <a href="#" className='nav-link responsive d-flex gap-2 align-items-center ps-4'>
+          <NavLink to='/' className='nav-link responsive d-flex gap-2 align-items-center ps-4'>
             <span className='text-light'>Inicio</span>
             <Home/>
-          </a>
+          </NavLink>
         </li>
         <li className='nav-item responsive'>
-          <a href="#" className='nav-link responsive d-flex gap-2 align-items-center ps-4'>
+          <NavLink to='/nosotros' className='nav-link responsive d-flex gap-2 align-items-center ps-4'>
             <span className='text-light'>Nosotros</span>
             <Nosotros/>
-          </a>
+          </NavLink>
         </li>
         <li className='nav-item responsive'>
-          <a href="#" className='nav-link responsive d-flex gap-2 align-items-center ps-4'>
+          <NavLink to='/portafolio' className='nav-link responsive d-flex gap-2 align-items-center ps-4'>
             <span className='text-light fs-6'>Portafolio</span>
             <PortafolioIcon/>
-          </a>
+          </NavLink>
         </li>
         <li className='nav-item responsive'>
-          <a href="#" className='nav-link responsive d-flex gap-2 align-items-center ps-4'>
+          <NavLink to='/servicios' className='nav-link responsive d-flex gap-2 align-items-center ps-4'>
             <span className='text-light'>Servicios</span>
             <ServicioIcon/>
-          </a>
+          </NavLink>
         </li>
       </ul>
     </>

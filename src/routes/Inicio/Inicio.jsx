@@ -11,21 +11,17 @@ import Picture5 from "../../assets/picture5.png";
 import Marca1Icon from "../../iconos/Marca1";
 import Marca2Icon from "../../iconos/Marca2";
 import Marca3Icon from "../../iconos/Marca3";
-import { useEffect } from "react";
-import ScrollCarousel from "scroll-carousel";
 
 function Inicio() {
-
+  /*
   useEffect(() => {
-
     new ScrollCarousel(".my-carousel", {
       speed: 10,
       smartSpeed: true,
       autoplay: true,
-    })
-
-  },[])
-
+    });
+  }, []);
+  */
   return (
     <>
       <section className="w-100 header-body">
@@ -57,40 +53,88 @@ function Inicio() {
           </div>
           <div className="marca">
             <div className="cabecera-marca d-flex justify-content-center align-items-center">
-              <Marca2Icon/>
+              <Marca2Icon />
             </div>
             <div className="cuerpo-marca mt-4">
-              <p>Optimización del Espacio y 
-              Experiencia del Usuario</p>
+              <p>Optimización del Espacio y Experiencia del Usuario</p>
             </div>
           </div>
           <div className="marca">
             <div className="cabecera-marca d-flex justify-content-center align-items-center">
-              <Marca3Icon/>
+              <Marca3Icon />
             </div>
             <div className="cuerpo-marca mt-4">
-              <p>Comunicación Visual y 
-              Coherencia de Marca</p>
+              <p>Comunicación Visual y Coherencia de Marca</p>
             </div>
           </div>
         </article>
         <main className="w-100 proyectos-container">
-          <div className="my-carousel">
-            <div className="my-slide">
-              <img src={Picture1} alt="" className="imagen-ejemplo"/>
+          <div
+            id="carouselExampleInterval"
+            className="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div className="carousel-inner">
+              <div className="carousel-item active" data-bs-interval="2000">
+                <img
+                  src={Picture1}
+                  alt=""
+                  className="imagen-ejemplo w-100 d-block"
+                />
+              </div>
+              <div className="carousel-item" data-bs-interval="2000">
+                <img
+                  src={Picture2}
+                  alt=""
+                  className="imagen-ejemplo w-100 d-block"
+                />
+              </div>
+              <div className="carousel-item" data-bs-interval="2000">
+                <img
+                  src={Picture3}
+                  alt=""
+                  className="imagen-ejemplo w-100 d-block"
+                />
+              </div>
+              <div className="carousel-item" data-bs-interval="2000">
+                <img
+                  src={Picture4}
+                  alt=""
+                  className="imagen-ejemplo w-100 d-block"
+                />
+              </div>
+              <div className="carousel-item" data-bs-interval="2000">
+                <img
+                  src={Picture5}
+                  alt=""
+                  className="imagen-ejemplo w-100 d-block"
+                />
+              </div>
             </div>
-            <div className="my-slide">
-              <img src={Picture2} alt="" className="imagen-ejemplo"/>
-            </div>
-            <div className="my-slide">
-              <img src={Picture3} alt="" className="imagen-ejemplo"/>
-            </div>
-            <div className="my-slide">
-              <img src={Picture4} alt="" className="imagen-ejemplo"/>
-            </div>
-            <div className="my-slide">
-              <img src={Picture5} alt="" className="imagen-ejemplo"/>
-            </div>
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Next</span>
+            </button>
           </div>
         </main>
       </section>

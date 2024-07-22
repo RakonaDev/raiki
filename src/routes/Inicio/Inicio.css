@@ -127,21 +127,11 @@
 }
 
 .proyectos-container{
-  height: 70dvh;
+  height: 100dvh;
 }
 
-.my-carousel{
-  background-color: white;
-  width: 6330px;
-  height: 60dvh;
-
-  .my-slide{
-
-    .imagen-ejemplo{
-      width: 200%;
-      height: 60dvh;
-    }
-  }
+.imagen-ejemplo{
+  height: 95dvh;
 }
 
 @keyframes flying {
@@ -159,5 +149,16 @@
   }
   to{
     opacity: 1;
+  }
+}
+
+@media (width < 800px) {
+
+  .proyectos-container{
+    height: 55dvh;
+  }
+
+  .imagen-ejemplo{
+    height: 45dvh;
   }
 }
