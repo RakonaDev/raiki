@@ -155,10 +155,12 @@
 @media (width < 800px) {
 
   .proyectos-container{
-    height: 60dvh;
+    height: 70dvh;
   }
 
   .imagen-ejemplo{
-    height: 330px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
   }
 }
