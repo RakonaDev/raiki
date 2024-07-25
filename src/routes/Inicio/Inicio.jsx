@@ -11,6 +11,7 @@ import Picture5 from "../../assets/picture5.png";
 import Marca1Icon from "../../iconos/Marca1";
 import Marca2Icon from "../../iconos/Marca2";
 import Marca3Icon from "../../iconos/Marca3";
+import { useEffect } from "react";
 
 function Inicio() {
   /*
@@ -22,6 +23,11 @@ function Inicio() {
     });
   }, []);
   */
+  useEffect(() => {
+    const $headerBody = document.querySelector(".header-body")
+    console.log($headerBody.scrollHeight)
+  },[])
+
   return (
     <>
       <section className="w-100 header-body">
@@ -68,7 +74,7 @@ function Inicio() {
             </div>
           </div>
         </article>
-        <main className="w-100 proyectos-container">
+        <main className="w-100 h-auto proyectos-container">
           <div
             id="carouselExampleInterval"
             className="carousel slide"

@@ -10,8 +10,14 @@ import Personaje3 from "../../assets/personaje3.png";
 import Personaje4 from "../../assets/personaje4.png";
 
 import "./Nosotros.css";
+import { useEffect } from "react";
 
 function Nosotros() {
+
+  useEffect(() => {
+    console.log(document.querySelector(".nosotros-main").scrollHeight)
+  },[])
+
   return (
     <>
       <section className="nosotros-main w-100 ps-5 pe-5 pt-5 h-auto" id="nosotros">
@@ -61,13 +67,13 @@ function Nosotros() {
         <section className="socios-section w-100 h-auto pb-5 pt-5">
           <p className="fs-1 fw-medium mb-5">Socios Estratégicos</p>
           <main className="socios-container d-flex gap-4 justify-content-evenly flex-wrap">
-            <a href="#">
+            <a href="#" className="socio-item">
               <img src={Zaitex} alt="zaitex" />
             </a>
-            <a href="#">
+            <a href="#" className="socio-item">
               <img src={Profit} alt="profit trading" />
             </a>
-            <a href="#">
+            <a href="#" className="socio-item">
               <img src={Club} alt="club de las 5am" />
             </a>
           </main>

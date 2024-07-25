@@ -1,0 +1,8 @@
+.imagen-proyecto{
+  background-color: #B9B9B9;
+  height: 300px;
+}
+
+.proyecto-item .titulo-proyecto{
+  transform: translateY(-10px);
+}

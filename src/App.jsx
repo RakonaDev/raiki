@@ -4,14 +4,17 @@ import Inicio from './routes/Inicio/Inicio'
 import Nosotros from './routes/Nosotros/Nosotros'
 import Servicios from './routes/Servicios/Servicios'
 import Proyectos from './routes/Proyectos/Proyectos'
+import { useContext } from 'react'
+import { ResponsiveContext } from './context/Responsive'
+import CabeceraScroll from './components/CabeceraRaikiScroll/CabeceraScroll'
 
 function App() {
-
+  const { windowScroll } = useContext(ResponsiveContext)
 
   return (
     <>
-      <Cabecera/>
-      <div className='dividor'></div>
+      { windowScroll == 0 ? <Cabecera/> : <CabeceraScroll/> }
+      <div className='dividor' id='dividor'></div>
       <div id='inicio'>
         <Inicio/>
       </div>

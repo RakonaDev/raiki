@@ -1,5 +1,40 @@
 .servicios-lista{
   margin: 0;
   padding: 0;
-  gap: 20px 0;
+  gap: 20px 30px;
 }
+
+.asesor-container{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .asesor-item{
+    width: 100px;
+  }
+}
+
+.agenda-item{
+  width: 500px;
+  background-color: #B1B1B1;
+
+  .footer-agenda{
+    height: 120px;
+    gap: 0px 40px;
+
+    .boton-agenda{
+      width: 180px;
+      height: 40px;
+      transform: translateY(-30px);
+      border-radius: 22px;
+      border: none;
+      background-color: black;
+    }
+    .imagen-consultoria{
+      width: 130px;
+    }
+  }
+}
+
