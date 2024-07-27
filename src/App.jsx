@@ -9,16 +9,16 @@ import { ResponsiveContext } from './context/Responsive'
 import CabeceraScroll from './components/CabeceraRaikiScroll/CabeceraScroll'
 
 function App() {
-  const { windowScroll } = useContext(ResponsiveContext)
+  const { windowScroll, windowWidth } = useContext(ResponsiveContext)
 
   return (
     <>
-      { windowScroll == 0 ? <Cabecera/> : <CabeceraScroll/> }
+      { windowWidth > 750 ? windowScroll == 0 ? <Cabecera/> : <CabeceraScroll/> : <Cabecera/> }
       <div className='dividor' id='dividor'></div>
       <div id='inicio'>
         <Inicio/>
       </div>
-      <div>
+      <div id='nosotros'>
         <Nosotros/>
       </div>
       <div id='servicios'>

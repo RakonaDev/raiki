@@ -18,7 +18,7 @@ function Cabecera() {
           <img src={raikiLogo} alt="raikiLogo" />
         </div>
         { windowWidth > 750 ? <Nav/> : <NavResponsive width={windowWidth}/> }
-        { windowWidth > 1050 ? <Redes/> : <RedesResponsive/>  }
+        { windowWidth > 1050 ? <Redes color="white"/> : <RedesResponsive/>  }
       </nav>
     </header>
   );

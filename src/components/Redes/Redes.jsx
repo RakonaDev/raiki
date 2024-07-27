@@ -1,36 +1,30 @@
 import FacebookIcon from "../../iconos/Facebook";
 import InstagramIcon from "../../iconos/Instagram";
 import TiktokIcon from "../../iconos/Tiktok";
-import TwitterIcon from "../../iconos/Twitter";
 import YoutubeIcon from '../../iconos/Youtube';
 
-function Redes() {
+function Redes(props) {
   return (
     <>
-      <ul className="redes-container">
+      <ul className="redes-container d-flex justify-content-evenly">
         <li className="red-container">
-          <a href="#" className="red-item">
-            <FacebookIcon />
+          <a href="https://www.facebook.com/raikide?locale=es_LA" className="red-item" target="_blank">
+            <FacebookIcon color={props.color}/>
           </a>
         </li>
         <li className="red-container">
-          <a href="#" className="red-item">
-            <InstagramIcon />
+          <a href="https://www.instagram.com/raikidesign/" className="red-item" target="_blank">
+            <InstagramIcon color={props.color}/>
           </a>
         </li>
         <li className="red-container">
-          <a href="#" className="red-item">
-            <TiktokIcon />
+          <a href="https://www.tiktok.com/@raiki.design?lang=es" className="red-item" target="_blank">
+            <TiktokIcon color={props.color}/>
           </a>
         </li>
         <li className="red-container">
-          <a href="#" className="red-item">
-            <TwitterIcon />
-          </a>
-        </li>
-        <li className="red-container">
-          <a href="#" className="red-item">
-            <YoutubeIcon />
+          <a href="https://www.youtube.com/@RaikiDesign" className="red-item" target="_blank">
+            <YoutubeIcon color={props.color}/>
           </a>
         </li>
       </ul>

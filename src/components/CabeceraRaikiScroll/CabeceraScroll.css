@@ -5,28 +5,44 @@
   height: 60px;
   left: 50%;
   margin-left: -40%;
-  bottom: 30px;
+  bottom: 10px;
   z-index: 40;
   border-radius: 20px;
+  animation: show-bottom 0.8s alternate ease;
 
   .logo-container{
-    width: 80px;
+    border: 2px solid white;
+    width: 40px;
   }
 
 }
 
 .cabecera-scroll .lista-navegacion{
-  height: 50px;
-  width: 50%;
+  height: 45px;
+  width: 520px;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+
   .lista-item{
     border-radius: 12px;
     background-color: black;
     width: 250px;
-    height: 50px;
+    height: 45px;
     transition: all 0.6s ease;
+    cursor: pointer;
 
-    &:hover{
+    &.active{
       background-color: #606060;
     }
+  }
+}
+
+@keyframes show-bottom {
+  from{
+    transform: translateY(100px);
+  }
+  to{
+    transform: translateY(0px);
   }
 }

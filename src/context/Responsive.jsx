@@ -31,8 +31,15 @@ function ResponsiveContextProvider({children}) {
     }
   },[])
 
+  function scrollElemento (elementoSeleccionado, instancia = 0) {
+    const elementos = document.querySelectorAll(elementoSeleccionado)
+    if(elementos.length > instancia){
+      elementos[instancia].scrollIntoView({behavior: 'smooth'})
+    }
+  }
+
   return (
-    <ResponsiveContext.Provider value={{ windowWidth, setWindowWidth, windowScroll ,setWindowScroll }}>
+    <ResponsiveContext.Provider value={{ windowWidth, setWindowWidth, windowScroll ,setWindowScroll, scrollElemento }}>
       {children}
     </ResponsiveContext.Provider>
   )

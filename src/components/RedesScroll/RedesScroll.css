@@ -1,0 +1,9 @@
+.nav-redes{
+  width: 200px;
+  height: 40px;
+
+  .red-item{
+    width: 30px;
+    height: 30px;
+  }
+}

@@ -18,6 +18,19 @@
   }
 }
 
+.my-carousel{
+  width: 100%;
+
+  .my-slide{
+    width: 900px;
+
+    >img{
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
 .header-body{
   .bola-chiquita{
     position: absolute;
