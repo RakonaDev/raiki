@@ -18,9 +18,10 @@ import { useEffect } from "react";
 function Inicio() {
   useEffect(() => {
     new ScrollCarousel(".my-carousel", {
-      speed: 10,
+      speed: 5,
       smartSpeed: true,
       autoplay: true,
+      margin: 0
     });
   }, []);
 
@@ -82,35 +83,35 @@ function Inicio() {
               <img
                 src={Picture1}
                 alt=""
-                className="imagen-ejemplo w-100 d-block"
+                className="imagen-ejemplo d-block ratio-16x9"
               />
             </div>
             <div className="my-slide">
               <img
                 src={Picture2}
                 alt=""
-                className="imagen-ejemplo w-100 d-block"
+                className="imagen-ejemplo d-block ratio-16x9"
               />
             </div>
             <div className="my-slide">
               <img
                 src={Picture3}
                 alt=""
-                className="imagen-ejemplo w-100 d-block"
+                className="imagen-ejemplo d-block ratio-16x9"
               />
             </div>
             <div className="my-slide">
               <img
                 src={Picture4}
                 alt=""
-                className="imagen-ejemplo w-100 d-block"
+                className="imagen-ejemplo d-block ratio-16x9"
               />
             </div>
             <div className="my-slide">
               <img
                 src={Picture5}
                 alt=""
-                className="imagen-ejemplo w-100 d-block"
+                className="imagen-ejemplo d-block ratio-16x9"
               />
             </div>
           </div>
