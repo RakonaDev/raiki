@@ -12,18 +12,9 @@ function CabeceraScroll() {
 
   const { scrollElemento } = useContext(ResponsiveContext)
 
-  function EliminarActive() {
-    const $navBoton = document.querySelectorAll(".lista-item");
-    $navBoton.forEach((item) => {
-      item.classList.remove("active");
-    });
-  }
-
-  useEffect(() => {
-    const $navItem = document.querySelectorAll(".lista-item")
-    window.addEventListener('scroll', () => {
-
-      let scrollInicio = document.querySelector('.dividor').scrollHeight + document.querySelector('#inicio').scrollHeight - 60
+  function activarItemXScroll ($navItem) {
+    
+    let scrollInicio = document.querySelector('.dividor').scrollHeight + document.querySelector('#inicio').scrollHeight - 60
       let scrollNosotros = document.querySelector('#nosotros').scrollHeight + scrollInicio - 60
       let scrollServicios = document.getElementById("servicios").scrollHeight + scrollNosotros - 60
       let scrollProyectos = document.getElementById("proyectos").scrollHeight + scrollServicios - 60
@@ -44,8 +35,23 @@ function CabeceraScroll() {
         EliminarActive()
         $navItem[3].classList.add("active")
       }
+  }
+
+  function EliminarActive() {
+    const $navBoton = document.querySelectorAll(".lista-item");
+    $navBoton.forEach((item) => {
+      item.classList.remove("active");
+    });
+  }
+
+  useEffect(() => {
+    const $navItem = document.querySelectorAll(".lista-item")
+    activarItemXScroll($navItem)
+    window.addEventListener('scroll', () => {
+      activarItemXScroll($navItem)
     })
   },[])
+
 
   return (
     <header className='cabecera-scroll d-flex justify-content-evenly align-items-center'>
