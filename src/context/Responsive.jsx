@@ -1,13 +1,16 @@
 import { createContext, useEffect, useState } from "react"
+import PropTypes from 'prop-types'
 
 export const ResponsiveContext = createContext()
 
-function ResponsiveContextProvider({children}) {
+function ResponsiveContextProvider({ children }) {
 
   const[windowWidth , setWindowWidth] = useState(window.innerWidth)
   const[windowScroll, setWindowScroll] = useState(0)
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth)
     }
@@ -43,6 +46,10 @@ function ResponsiveContextProvider({children}) {
       {children}
     </ResponsiveContext.Provider>
   )
+}
+
+ResponsiveContextProvider.propTypes = {
+  children: PropTypes.node.isRequired
 }
 
 export default ResponsiveContextProvider

@@ -1,34 +1,37 @@
-import './App.css'
-import Cabecera from './components/CabeceraRaiki/Cabecera'
-import Inicio from './routes/Inicio/Inicio'
-import Nosotros from './routes/Nosotros/Nosotros'
-import Servicios from './routes/Servicios/Servicios'
-import Proyectos from './routes/Proyectos/Proyectos'
-import { useContext } from 'react'
-import { ResponsiveContext } from './context/Responsive'
-import CabeceraScroll from './components/CabeceraRaikiScroll/CabeceraScroll'
+import "./App.css";
+import Cabecera from "./components/CabeceraRaiki/Cabecera";
+import { useContext } from "react";
+import { ResponsiveContext } from "./context/Responsive";
+import CabeceraScroll from "./components/CabeceraRaikiScroll/CabeceraScroll";
+import { Routes, Route} from "react-router-dom";
+import { InicioRaiki } from "./routes/InicioRaiki/InicioRaiki";
+import { ProfitTrading } from "./routes/ProfitTrading/ProfitTrading";
+import KamStudio from "./routes/KamStudio/KamStudio";
+import SaldanaGroup from "./routes/SaldanaGroup/SaldanaGroup";
 
 function App() {
-  const { windowScroll, windowWidth } = useContext(ResponsiveContext)
-
+  const { windowScroll, windowWidth } = useContext(ResponsiveContext);
+  
   return (
     <>
-      { windowWidth > 750 ? windowScroll == 0 ? <Cabecera/> : <CabeceraScroll/> : <Cabecera/> }
-      <div className='dividor' id='dividor'></div>
-      <div id='inicio'>
-        <Inicio/>
-      </div>
-      <div id='nosotros'>
-        <Nosotros/>
-      </div>
-      <div id='servicios'>
-        <Servicios/>
-      </div>
-      <div id='proyectos'>
-        <Proyectos/>
-      </div>
+      {windowWidth > 750 ? (
+        windowScroll == 0 ? (
+          <Cabecera />
+        ) : (
+          <CabeceraScroll />
+        )
+      ) : (
+        <Cabecera />
+      )}
+      <div className="dividor" id="dividor"></div>
+      <Routes>
+        <Route path="/" element={<InicioRaiki />} />
+        <Route path="/proyectos/profit-trading" element={ <ProfitTrading/> } />
+        <Route path="/proyectos/kam-studio" element={ <KamStudio/> } />
+        <Route path="/proyectos/saldana-group" element={ <SaldanaGroup/> } />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

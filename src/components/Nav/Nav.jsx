@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import Home from "../../iconos/home";
 import Nosotros from "../../iconos/Nosotros";
 import PortafolioIcon from "../../iconos/Portafolio";
@@ -11,10 +11,21 @@ function Nav() {
 
   const { scrollElemento } = useContext(ResponsiveContext)
 
+  const[esProyecto, setEsProyecto] = useState(false)
+
+  useEffect(() => {
+    if(location.pathname.includes('/proyectos/')){
+      setEsProyecto(true)
+    }
+    else {
+      setEsProyecto(false)
+    }
+  }, [setEsProyecto])
+
   return (
     <>
       <ul className="nav-container d-flex flex-row bg-black">
-        <li className="nav-item active d-flex gap-2 align-items-center" >
+        <li className={`nav-item ${esProyecto ? '' : 'active'} d-flex gap-2 align-items-center`} >
           <span className="text-white">Inicio</span>
           <Home />
         </li>
@@ -26,7 +37,7 @@ function Nav() {
           <span className="text-white">Servicios</span>
           <ServicioIcon />
         </li>
-        <li className="nav-item d-flex gap-2 align-items-center" onClick={() => scrollElemento('#proyectos')}>
+        <li className={`nav-item ${esProyecto ? 'active' : ''} d-flex gap-2 align-items-center`} onClick={() => scrollElemento('#proyectos')}>
           <span className="text-white">Proyectos</span>
           <PortafolioIcon />
         </li>

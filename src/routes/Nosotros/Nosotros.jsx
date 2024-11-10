@@ -10,13 +10,8 @@ import Personaje3 from "../../assets/personaje3.png";
 import Personaje4 from "../../assets/personaje4.png";
 
 import "./Nosotros.css";
-import { useEffect } from "react";
 
 function Nosotros() {
-
-  useEffect(() => {
-    console.log(document.querySelector(".nosotros-main").scrollHeight)
-  },[])
 
   return (
     <>

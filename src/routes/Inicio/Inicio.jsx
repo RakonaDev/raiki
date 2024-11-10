@@ -25,11 +25,6 @@ function Inicio() {
     });
   }, []);
 
-  useEffect(() => {
-    const $headerBody = document.querySelector(".header-body");
-    console.log($headerBody.scrollHeight);
-  }, []);
-
   return (
     <>
       <section className="w-100 header-body inicio-main">

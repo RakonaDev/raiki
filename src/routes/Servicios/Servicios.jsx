@@ -11,12 +11,8 @@ import Consultoria1 from '../../assets/consultoria1.png'
 import Consultoria2 from '../../assets/consultoria2.svg'
 
 import "./Servicios.css";
-import { useEffect } from "react";
 
 function Servicios() {
-  useEffect(() => {
-    console.log(document.querySelector(".servicios-main").scrollHeight);
-  }, []);
 
   return (
     <>
