@@ -1,14 +1,14 @@
 export function activarItemXScroll($navItem) {
   let scrollInicio =
-    document.querySelector(".dividor").scrollHeight +
-    document.querySelector("#inicio").scrollHeight -
+    document.querySelector(".dividor")?.scrollHeight +
+    document.querySelector("#inicio")?.scrollHeight -
     60;
   let scrollNosotros =
-    document.querySelector("#nosotros").scrollHeight + scrollInicio - 60;
+    document.querySelector("#nosotros")?.scrollHeight + scrollInicio - 60;
   let scrollServicios =
-    document.getElementById("servicios").scrollHeight + scrollNosotros - 60;
+    document.getElementById("servicios")?.scrollHeight + scrollNosotros - 60;
   let scrollProyectos =
-    document.getElementById("proyectos").scrollHeight + scrollServicios - 60;
+    document.getElementById("proyectos")?.scrollHeight + scrollServicios - 60;
 
   if (window.scrollY >= 0 && window.scrollY <= scrollInicio) {
     EliminarActive();

@@ -1,7 +1,7 @@
 import Servicio from "../../components/Servicio/Servicio";
 
 import Servicio1 from "../../assets/Servicio1.svg";
-import Servicio2 from "../../assets/Servicio2.svg";
+/*import Servicio2 from "../../assets/Servicio2.svg";*/
 import Servicio3 from "../../assets/Servicio3.svg";
 import Servicio4 from "../../assets/Servicio4.svg";
 
@@ -11,8 +11,14 @@ import Consultoria1 from '../../assets/consultoria1.png'
 import Consultoria2 from '../../assets/consultoria2.svg'
 
 import "./Servicios.css";
+import { Form } from "../../components/Form/Form";
 
 function Servicios() {
+
+  function openDialog(id) {
+    const dialog = document.getElementById(id);
+    dialog.showModal();
+  }
 
   return (
     <>
@@ -23,11 +29,13 @@ function Servicios() {
             titulo="Branding"
             descripcion="Potenciamos marcas mediante estrategias de branding que fusionan creatividad y significado, construyendo una identidad visual coherente y atractiva que conecta de manera auténtica con su audiencia."
           />
+          {/*
           <Servicio
             imagen={Servicio2}
             titulo="Diseño de Interiores"
             descripcion="Transformamos espacios con nuestro servicio de diseño de interiores, fusionando funcionalidad y estética para crear ambientes únicos y personalizados que reflejen el estilo y las necesidades de nuestros clientes."
           />
+          */}
           <Servicio
             imagen={Servicio3}
             titulo="Desarrollo Web"
@@ -61,11 +69,16 @@ function Servicios() {
             Agenda una cita con nosotros
           </p>
           <div className="d-flex w-100 justify-content-evenly flex-wrap row-gap-5">
+            <div className="d-flex justify-content-center align-items-center">
+              <dialog id="dialog-1" className="dialog">
+                <Form/>
+              </dialog>
+            </div>
             <article className="agenda-item p-5">
               <h4 className="fs-3 text-black text-center">¿Necesitas que te guiemos?</h4>
               <p className="fs-5 mt-5 h-25">Te <span className="fw-bolder">obsequiamos 20 min.</span> de consultoría</p>
               <div className="w-100 mt-5 footer-agenda d-flex flex-wrap column-gap-5 justify-content-evenly align-items-end"> 
-                <button type="button" className="boton-agenda text-light">Agendar Consultoría</button>
+                <button type="button" className="boton-agenda text-light" onClick={() => openDialog('dialog-1')}>Agendar Consultoría</button>
                 <img src={Consultoria1} alt="consultoria" className="imagen-consultoria"/>
               </div>
             </article>

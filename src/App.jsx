@@ -14,7 +14,7 @@ function App() {
   
   return (
     <>
-      {windowWidth > 750 ? (
+      {windowWidth > 1050 ? (
         windowScroll == 0 ? (
           <Cabecera />
         ) : (

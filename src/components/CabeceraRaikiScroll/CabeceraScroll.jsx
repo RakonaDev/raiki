@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import Home from "../../iconos/home";
 import Nosotros from "../../iconos/Nosotros";
 import PortafolioIcon from "../../iconos/Portafolio";
@@ -10,7 +10,18 @@ import RedesScroll from "../RedesScroll/RedesScroll";
 import { activarItemXScroll, EliminarActive } from "../../logic/ActivarScroll";
 
 function CabeceraScroll() {
-  const { scrollElemento } = useContext(ResponsiveContext);
+  const { scrollElemento, mandarInicio } = useContext(ResponsiveContext);
+  const[esProyecto, setEsProyecto] = useState(false)
+
+
+  useEffect(() => {
+    if(location.pathname.includes('/proyectos/')){
+      setEsProyecto(true)
+    }
+    else {
+      setEsProyecto(false)
+    }
+  }, [setEsProyecto])
 
   useEffect(() => {
     const $navItem = document.querySelectorAll(".lista-item");
@@ -37,28 +48,28 @@ function CabeceraScroll() {
       <ul className="lista-navegacion d-flex justiy-content-evenly">
         <li
           className="d-flex lista-item align-items-center justify-content-center gap-2"
-          onClick={() => scrollElemento(".dividor")}
+          onClick={() => esProyecto ? mandarInicio() : scrollElemento(".dividor")}
         >
           <p className="text-light mt-3">Inicio</p>
           <Home />
         </li>
         <li
           className="d-flex lista-item align-items-center justify-content-center gap-2"
-          onClick={() => scrollElemento(".nosotros-main")}
+          onClick={() => esProyecto ? mandarInicio() : scrollElemento(".nosotros-main")}
         >
           <p className="text-light mt-3">Nosotros</p>
           <Nosotros />
         </li>
         <li
           className="d-flex lista-item align-items-center justify-content-center gap-2"
-          onClick={() => scrollElemento(".servicios-main")}
+          onClick={() => esProyecto ? mandarInicio() : scrollElemento(".servicios-main")}
         >
           <p className="text-light mt-3">Servicios</p>
           <ServicioIcon />
         </li>
         <li
           className="d-flex lista-item align-items-center justify-content-center gap-2"
-          onClick={() => scrollElemento(".proyectos-main")}
+          onClick={() => esProyecto ? '' : scrollElemento(".proyectos-main")}
         >
           <p className="text-light mt-3">Proyectos</p>
           <PortafolioIcon />

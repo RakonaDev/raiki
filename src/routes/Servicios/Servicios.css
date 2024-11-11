@@ -16,6 +16,17 @@
   }
 }
 
+.dialog{
+  margin: auto;
+  width: 750px;
+  border-radius: 38px;
+  background-color: rgba(255, 96, 96, 0.9);
+}
+
+.dialog::backdrop{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .agenda-item{
   width: 500px;
   background-color: #B1B1B1;
@@ -30,7 +41,12 @@
       transform: translateY(-30px);
       border-radius: 22px;
       border: none;
-      background-color: black;
+      background-color: rgba(0, 0, 0, 1);
+      transition: background-color 0.4s ease-in-out;
+
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.5);
+      }
     }
     .imagen-consultoria{
       width: 130px;

@@ -9,7 +9,7 @@ import './Nav.css'
 
 function Nav() {
 
-  const { scrollElemento } = useContext(ResponsiveContext)
+  const { scrollElemento, mandarInicio } = useContext(ResponsiveContext)
 
   const[esProyecto, setEsProyecto] = useState(false)
 
@@ -25,15 +25,15 @@ function Nav() {
   return (
     <>
       <ul className="nav-container d-flex flex-row bg-black">
-        <li className={`nav-item ${esProyecto ? '' : 'active'} d-flex gap-2 align-items-center`} >
+        <li className={`nav-item ${esProyecto ? '' : 'active'} d-flex gap-2 align-items-center`} onClick={() => esProyecto ? mandarInicio() : ''}>
           <span className="text-white">Inicio</span>
           <Home />
         </li>
-        <li className="nav-item d-flex gap-2 align-items-center" onClick={() => scrollElemento('#nosotros')}>
+        <li className="nav-item d-flex gap-2 align-items-center" onClick={() => esProyecto ? mandarInicio() : scrollElemento('#nosotros')}>
           <span className="text-white">Nosotros</span>
           <Nosotros />
         </li>
-        <li className="nav-item d-flex gap-2 align-items-center" onClick={() => scrollElemento('#servicios')}>
+        <li className="nav-item d-flex gap-2 align-items-center" onClick={() => esProyecto ? mandarInicio() : scrollElemento('#servicios')}>
           <span className="text-white">Servicios</span>
           <ServicioIcon />
         </li>

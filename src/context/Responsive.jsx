@@ -9,7 +9,6 @@ function ResponsiveContextProvider({ children }) {
   const[windowScroll, setWindowScroll] = useState(0)
 
   useEffect(() => {
-    window.scrollTo(0, 0)
 
     const handleResize = () => {
       setWindowWidth(window.innerWidth)
@@ -21,6 +20,10 @@ function ResponsiveContextProvider({ children }) {
       window.removeEventListener('resize', handleResize)
     }
   },[])
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  },[location.pathname])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,8 +44,12 @@ function ResponsiveContextProvider({ children }) {
     }
   }
 
+  function mandarInicio () {
+    location.pathname = '/'
+  }
+
   return (
-    <ResponsiveContext.Provider value={{ windowWidth, setWindowWidth, windowScroll ,setWindowScroll, scrollElemento }}>
+    <ResponsiveContext.Provider value={{ windowWidth, setWindowWidth, windowScroll ,setWindowScroll, scrollElemento, mandarInicio }}>
       {children}
     </ResponsiveContext.Provider>
   )
