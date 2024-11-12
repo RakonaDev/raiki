@@ -40,11 +40,12 @@ function ResponsiveContextProvider({ children }) {
   function scrollElemento (elementoSeleccionado, instancia = 0) {
     const elementos = document.querySelectorAll(elementoSeleccionado)
     if(elementos.length > instancia){
-      elementos[instancia].scrollIntoView({behavior: 'smooth'})
+      elementos[instancia].scrollIntoView({behavior: 'smooth'}, {block: 'start'})
     }
   }
 
-  function mandarInicio () {
+  function mandarInicio (elemento) {
+    sessionStorage.setItem('elemento', elemento)
     location.pathname = '/'
   }
 

@@ -10,6 +10,7 @@
 
     .personaje-imagen{
       background-color: #e2e2e2;
+      aspect-ratio: 3/4;
     }
   }
 

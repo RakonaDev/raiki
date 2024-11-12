@@ -40,15 +40,7 @@ export function Form () {
 
     const whatsappUrl = `https://wa.me/${numeroTelefono}?text=${whatsappMessage}`;
 
-    if ( nombre && apellido && empresa && correo && telefono && mensaje ) {
-      window.open(whatsappUrl, '_blank');
-      document.getElementById('mensaje').value = '';
-      document.getElementById('nombre').value = '';
-      document.getElementById('apellido').value = '';
-      document.getElementById('empresa').value = '';
-      document.getElementById('correo').value = '';
-      document.getElementById('telefono').value = '';
-    }
+    window.open(whatsappUrl, '_blank');
   }
 
   return (
