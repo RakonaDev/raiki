@@ -48,28 +48,28 @@ function CabeceraScroll() {
       <ul className="lista-navegacion d-flex justiy-content-evenly">
         <li
           className="d-flex lista-item align-items-center justify-content-center gap-2"
-          onClick={() => esProyecto ? mandarInicio() : scrollElemento(".dividor")}
+          onClick={() => esProyecto ? mandarInicio('dividor') : scrollElemento(".dividor")}
         >
           <p className="text-light mt-3">Inicio</p>
           <Home />
         </li>
         <li
           className="d-flex lista-item align-items-center justify-content-center gap-2"
-          onClick={() => esProyecto ? mandarInicio() : scrollElemento(".nosotros-main")}
+          onClick={() => esProyecto ? mandarInicio('nosotros') : scrollElemento(".nosotros-main")}
         >
           <p className="text-light mt-3">Nosotros</p>
           <Nosotros />
         </li>
         <li
           className="d-flex lista-item align-items-center justify-content-center gap-2"
-          onClick={() => esProyecto ? mandarInicio() : scrollElemento(".servicios-main")}
+          onClick={() => esProyecto ? mandarInicio('servicios') : scrollElemento(".servicios-main")}
         >
           <p className="text-light mt-3">Servicios</p>
           <ServicioIcon />
         </li>
         <li
           className="d-flex lista-item align-items-center justify-content-center gap-2"
-          onClick={() => esProyecto ? '' : scrollElemento(".proyectos-main")}
+          onClick={() => esProyecto ? mandarInicio('proyectos') : scrollElemento(".proyectos-main")}
         >
           <p className="text-light mt-3">Proyectos</p>
           <PortafolioIcon />

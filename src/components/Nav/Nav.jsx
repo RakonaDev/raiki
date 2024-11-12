@@ -25,19 +25,19 @@ function Nav() {
   return (
     <>
       <ul className="nav-container d-flex flex-row bg-black">
-        <li className={`nav-item ${esProyecto ? '' : 'active'} d-flex gap-2 align-items-center`} onClick={() => esProyecto ? mandarInicio() : ''}>
+        <li className={`nav-item ${esProyecto ? '' : 'active'} d-flex gap-2 align-items-center`} onClick={() => esProyecto ? mandarInicio('dividor') : ''}>
           <span className="text-white">Inicio</span>
           <Home />
         </li>
-        <li className="nav-item d-flex gap-2 align-items-center" onClick={() => esProyecto ? mandarInicio() : scrollElemento('#nosotros')}>
+        <li className="nav-item d-flex gap-2 align-items-center" onClick={() => esProyecto ? mandarInicio('nosotros') : scrollElemento('#nosotros')}>
           <span className="text-white">Nosotros</span>
           <Nosotros />
         </li>
-        <li className="nav-item d-flex gap-2 align-items-center" onClick={() => esProyecto ? mandarInicio() : scrollElemento('#servicios')}>
+        <li className="nav-item d-flex gap-2 align-items-center" onClick={() => esProyecto ? mandarInicio('servicios') : scrollElemento('#servicios')}>
           <span className="text-white">Servicios</span>
           <ServicioIcon />
         </li>
-        <li className={`nav-item ${esProyecto ? 'active' : ''} d-flex gap-2 align-items-center`} onClick={() => scrollElemento('#proyectos')}>
+        <li className={`nav-item ${esProyecto ? 'active' : ''} d-flex gap-2 align-items-center`} onClick={() => esProyecto ? mandarInicio('proyectos') : scrollElemento('#proyectos')}>
           <span className="text-white">Proyectos</span>
           <PortafolioIcon />
         </li>
