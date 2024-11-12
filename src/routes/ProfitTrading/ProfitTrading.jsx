@@ -5,17 +5,21 @@ import Carta from "../../assets/ProfitTrading/carta.jpg";
 import Planos from "../../assets/ProfitTrading/planos.jpg";
 import Marca from "../../assets/ProfitTrading/marca.jpg";
 import Footer from "../../assets/ProfitTrading/footer.jpg";
+import { useContext } from "react";
+import { ResponsiveContext } from "../../context/Responsive";
 
 export function ProfitTrading() {
+
+  const { windowWidth } = useContext(ResponsiveContext);
   return (
     <>
       <div>
         <img src={Banner} alt="profit trading" className="w-100" />
         <header className="bg-black text-white w-full h-auto">
-          <div className="container-xxl d-flex px-2 py-5 gap-5">
-            <div className="w-75">
-              <h1>De las Pérdidas al Éxito</h1>
-              <div className="d-flex row-gap-5 column-gap-3 mt-4 text-justify">
+          <div className={`container-xxl d-flex px-2 py-5 gap-5 ${windowWidth <= 1050 ? 'flex-wrap-reverse' : ''}`}>
+            <div className={`${windowWidth <= 1050 ? 'w-100' : 'w-75'}`}>
+              <h1 className={`fw-bold ${windowWidth <= 950 ? 'text-center' : ''}`}>De las Pérdidas al Éxito</h1>
+              <div className={`d-flex row-gap-1 column-gap-3 mt-4 text-justify ${windowWidth <= 950 ? 'flex-wrap' : ''}`}>
                 <p>
                   Tras sufrir pérdidas en nuestras primeras inversiones en
                   criptomonedas en 2021, transformamos esa experiencia en una
@@ -30,15 +34,15 @@ export function ProfitTrading() {
                 </p>
               </div>
             </div>
-            <div className="w-25 text-justify font-k2d">
-              <p>Branding / identidad / Estrategia</p>
-              <h1>Profit Trading</h1>
+            <div className={`${windowWidth <= 1050 ? 'w-100' : 'w-25'} text-justify font-k2d`}>
+              <p className={`font-k2d ${windowWidth <= 950 ? 'text-center' : ''}`}>Branding / identidad / Estrategia</p>
+              <h1 className={`font-k2d ${windowWidth <= 950 ? 'text-center' : ''}`}>Profit Trading</h1>
             </div>
           </div>
         </header>
         <section className="w-100 h-auto bg-white text-black">
-          <div className="container-xxl d-flex py-5 px-2 row-gap-5 column-gap-3 column-gap-3 align-items-center">
-            <p className="text-justify font-k2d w-50 pe-4">
+          <div className={`container-xxl d-flex py-5 px-2 row-gap-5 column-gap-3 column-gap-3 align-items-center ${windowWidth <= 1050 ? 'flex-wrap-reverse' : ''}`}>
+            <p className={`text-justify font-k2d ${windowWidth <= 950 ? 'w-100' : 'w-50 pe-4'}`}>
               Aunque la marca ya ha dejado su huella en mercados
               internacionales, ahora se centra en transformar la vida de los
               traders en Perú. Su misión es inspirar a los peruanos y peruanas a
@@ -49,15 +53,15 @@ export function ProfitTrading() {
               lograr el éxito financiero, contribuyendo al crecimiento y
               desarrollo económico del país.
             </p>
-            <h1 className="w-50 fw-bold ps-4">
+            <h1 className={`${windowWidth <= 1050 ? 'w-100' : 'w-50 ps-4'} fw-bold`}>
               Liderando el Camino en el Mundo del Trading Financiero
             </h1>
           </div>
         </section>
         <img src={Pensamiento} alt="pensamiento" className="w-100" />
         <section className="w-100 h-auto bg-white text-black">
-          <div className="container-xxl d-flex py-5 px-2 row-gap-5 column-gap-3 align-items-center">
-            <div className="w-50 text-justify font-k2d pe-3">
+          <div className={`container-xxl d-flex py-5 px-2 row-gap-5 column-gap-3 ${windowWidth <= 1050 ? 'flex-wrap-reverse' : ''} align-items-center`}>
+            <div className={`${windowWidth <= 1050 ? 'w-100' : 'w-50 pe-3'} text-justify font-k2d`}>
               <p>
                 Para alinear la comunicación e identidad de PROFIT TRADING con
                 sus nuevos objetivos, nos vimos obligados a profundizar en la
@@ -90,17 +94,17 @@ export function ProfitTrading() {
                 incertidumbre en oportunidades reales de éxito financiero.
               </p>
             </div>
-            <div className="w-50 ps-3">
+            <div className={`${windowWidth <= 1050 ? 'w-100' : 'w-50 ps-3'}`}>
               <h1 className="fw-bold">Liderando el Camino en el Mundo del Trading Financiero</h1>
             </div>
           </div>
         </section>
         <img src={Certificado} alt="certificado" className="w-100" />
-        <div className="mt-3 d-flex w-100 gap-3">
-          <div className="w-50">
+        <div className={`mt-3 d-flex w-100 gap-3 ${windowWidth <= 1050 ? 'flex-wrap' : ''}`}>
+          <div className={`${windowWidth <= 1050 ? 'w-100' : 'w-50'}`}>
             <img src={Carta} alt="carta" className="w-100 object-fit-cover h-100" />
           </div>
-          <div className="w-50">
+          <div className={`${windowWidth <= 1050 ? 'w-100' : 'w-50'}`}>
             <img src={Planos} alt="planos" className="w-100 object-fit-cover h-100" />
           </div>
         </div>

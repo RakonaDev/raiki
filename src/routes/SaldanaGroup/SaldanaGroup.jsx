@@ -1,14 +1,19 @@
+import { useContext } from "react";
 import Banner from "../../assets/SaldanaGroup/banner.jpg";
 import Body from "../../assets/SaldanaGroup/body.jpg";
+import { ResponsiveContext } from "../../context/Responsive";
 
 export default function SaldanaGroup() {
+
+  const { windowWidth } = useContext(ResponsiveContext);
+
   return (
     <>
       <img src={Banner} alt="banner" className="w-100 h-auto" />
       <header className="w-100 h-auto bg-black text-white">
-        <div className="container-xxl py-5 d-flex row-gap-5">
-          <div className="w-50 py-3">
-            <h1>Construyendo Sueños</h1>
+        <div className={`container-xxl py-5 d-flex row-gap-5 column-gap-3 ${windowWidth <= 750 ? 'flex-wrap-reverse' : ''}`}>
+          <div className={`${windowWidth <= 750 ? 'w-100' : 'w-50'} py-3`}>
+            <h1 className={`${windowWidth <= 750 ? 'text-center fw-bold' : ''}`}>Construyendo Sueños</h1>
             <p className="mt-5 text-justify">
               Enfrentamos desafíos significativos en nuestros primeros proyectos
               en el sector de la construcción, lo que nos permitió identificar
@@ -20,17 +25,17 @@ export default function SaldanaGroup() {
               cada proyecto que desarrollamos.
             </p>
           </div>
-          <div className="w-50 flex-column d-flex align-items-end">
+          <div className={`${windowWidth <= 750 ? 'w-100 align-items-center' : 'w-50 align-items-end'} flex-column d-flex `}>
             <div>
-              <p className="font-k2d">Branding / identidad / Estrategia </p>
-              <h1 className="font-k2d fw-normal">Saldaña Group</h1>
+              <p className={`font-k2d ${windowWidth <= 750 ? 'text-center' : ''}`}>Branding / identidad / Estrategia </p>
+              <h1 className={`font-k2d fw-normal ${windowWidth <= 750 ? 'text-center' : ''}`}>Saldaña Group</h1>
             </div>
           </div>
         </div>
       </header>
       <section className="w-100 h-auto bg-white text-black">
-        <div className="container-xxl py-5 d-flex row-gap-5">
-          <p className="w-50 pe-5 font-k2d text-justify">
+        <div className={`container-xxl py-5 d-flex row-gap-5 column-gap-3 ${windowWidth <= 750 ? 'flex-wrap-reverse' : ''}`}>
+          <p className={`${windowWidth <= 750 ? 'w-100 ' : 'w-50 pe-5'} font-k2d text-justify`}>
             Saldaña Group ha dejado su huella en el ámbito de la construcción,
             destacando por su enfoque en proyectos de alta calidad. Ahora, la
             empresa se enfoca en transformar la manera en que se concibe el
@@ -43,8 +48,8 @@ export default function SaldanaGroup() {
             estamos comprometidos a liderar esta visión con cada proyecto que
             realizamos
           </p>
-          <div className="w-50 h-auto d-flex align-items-center">
-            <h1 className="fw-bold">
+          <div className={` ${windowWidth <= 750 ? 'w-100 ' : 'w-50'} h-auto d-flex align-items-center`}>
+            <h1 className={`fw-bold ${windowWidth <= 750 ? 'text-center' : ''}`}>
               Liderando el Camino en el Mundo de la construcción{" "}
             </h1>
           </div>
@@ -53,7 +58,7 @@ export default function SaldanaGroup() {
       <img src={Body} alt="body" className="w-100 h-auto" />
       <section className="w-100 h-auto bg-white text-black">
         <div className="container-xxl py-5 d-flex row-gap-5">
-          <p className="w-50 pe-5 font-k2d text-justify pb-5">
+          <p className={`${ windowWidth <= 750 ? '' : 'pe-5'} w-100 font-k2d text-justify pb-5`}>
             En Saldaña Group, redefinimos nuestra identidad al redescubrir los
             valores que nos guían. Guiados por Mauro Saldaña, ingeniero civil y
             fundador, entendimos a fondo el sector de la construcción, los
@@ -67,11 +72,6 @@ export default function SaldanaGroup() {
             convertimos los retos del sector en oportunidades para construir un
             futuro mejor para nuestras comunidades.
           </p>
-          <div className="w-50 h-auto d-flex align-items-center mb-5">
-            <h1 className="fw-bold">
-              Liderando el Camino en el Mundo del Trading Financiero.
-            </h1>
-          </div>
         </div>
       </section>
     </>

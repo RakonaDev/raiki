@@ -1,0 +1,32 @@
+.form-button-group .whats-btn {
+  background-color: rgba(39, 161, 26, 1);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.form-button-group .whats-btn:hover {
+  background-color: rgba(39, 181, 26, 1);
+}
+
+.form-button-group .form-btn{
+  border: none;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.form-button-group .form-btn:hover{
+  background-color: rgba(50, 50, 50, 1);
+}
+
+textarea {
+  resize: none;
+}

@@ -20,6 +20,11 @@ function Servicios() {
     dialog.showModal();
   }
 
+  function closeDialog(id) {
+    const dialog = document.getElementById(id);
+    dialog.close();
+  }
+
   return (
     <>
       <div className="w-100 servicios-main mt-5 ps-5 pe-5 pt-5 d-flex flex-column justify-content-center">
@@ -71,6 +76,11 @@ function Servicios() {
           <div className="d-flex w-100 justify-content-evenly flex-wrap row-gap-5">
             <div className="d-flex justify-content-center align-items-center">
               <dialog id="dialog-1" className="dialog">
+                <div className="d-flex justify-content-end px-4 pt-3">
+                  <button type="button" className="close" onClick={() => closeDialog('dialog-1')}>
+                    <i className="fa-solid fa-xmark text-black fs-3"></i>
+                  </button>
+                </div>
                 <Form/>
               </dialog>
             </div>
@@ -86,7 +96,7 @@ function Servicios() {
               <h4 className="fs-3 text-black text-center">¿Ya tienes claro que necesitas?</h4>
               <p className="fs-5 mt-5 h-25">Reunámonos para revisar tu requerimiento. Agendar para cotizar</p>
               <div className="w-100 mt-5 footer-agenda d-flex column-gap-5 flex-wrap justify-content-evenly align-items-end">
-                <button type="button" className="boton-agenda text-light">Agenda Consultoría</button>
+                <button type="button" className="boton-agenda text-light" onClick={() => openDialog('dialog-1')}>Agendar Consultoría</button>
                 <img src={Consultoria2} alt="consultoria" className="imagen-consultoria" />
               </div>
             </article>

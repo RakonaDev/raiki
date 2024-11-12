@@ -2,16 +2,20 @@ import Banner from "../../assets/KamStudio/banner.jpg";
 import PrimeraFoto from "../../assets/KamStudio/1.jpg";
 import SegundaFoto from "../../assets/KamStudio/2.jpg";
 import TerceraFoto from "../../assets/KamStudio/3.jpg";
+import { useContext } from "react";
+import { ResponsiveContext } from "../../context/Responsive";
 
 export default function KamStudio() {
+  const { windowWidth } = useContext(ResponsiveContext);
+
   return (
     <div>
       <img src={Banner} alt="banner" className="w-100 h-auto" />
       <header className="bg-black text-white w-full h-auto">
-        <div className="container-xxl d-flex px-2 py-5 gap-5">
-          <div className="w-75">
-            <h1>Redefiniendo Espacios</h1>
-            <div className="d-flex row-gap-5 column-gap-3 mt-4 text-justify">
+        <div className={`container-xxl d-flex py-5 gap-5 ${windowWidth <= 950 ? 'flex-wrap-reverse' : 'px-2'}`}>
+          <div className={`${windowWidth <= 950 ? 'w-100' : 'w-75'}`}>
+            <h1 className={`fw-bold ${windowWidth <= 950 ? 'text-center' : ''}`}>De la Creatividad al Respeto</h1>
+            <div className={`d-flex row-gap-1 column-gap-3 mt-4 text-justify ${windowWidth <= 950 ? 'flex-wrap' : ''}`}>
               <p>
                 KAMI Studio es un joven pero ambicioso estudio de arquitectura y
                 paisajismo que nació en 2023 con la visión de transformar la
@@ -32,16 +36,16 @@ export default function KamStudio() {
               </p>
             </div>
           </div>
-          <div className="w-25 text-justify font-k2d">
-            <p>Branding / identidad / Estrategia</p>
-            <h1>KAM STUDIO</h1>
+          <div className={`${windowWidth <= 950 ? 'w-100' : 'w-25'} text-justify font-k2d`}>
+            <p className={`font-k2d ${windowWidth <= 950 ? 'text-center' : ''}`}>Branding / identidad / Estrategia</p>
+            <h1 className={`font-k2d ${windowWidth <= 950 ? 'text-center' : ''}`}>KAM STUDIO</h1>
           </div>
         </div>
       </header>
       <img src={PrimeraFoto} alt="primera foto" className="w-100 h-auto" />
-      <section className="my-3 w-full h-auto d-flex gap-3">
-        <img src={SegundaFoto} alt="segunda foto" className="w-50 h-auto object-fit-cover" />
-        <img src={TerceraFoto} alt="tercera foto" className="w-50 h-auto object-fit-cover" />
+      <section className={`my-3 w-full h-auto d-flex gap-3 ${windowWidth <= 950 ? 'flex-wrap' : ''}`}>
+        <img src={SegundaFoto} alt="segunda foto" className={` ${windowWidth <= 950 ? 'w-100 h-auto' : 'w-50 h-auto'} object-fit-cover`} />
+        <img src={TerceraFoto} alt="tercera foto" className={` ${windowWidth <= 950 ? 'w-100 h-auto' : 'w-50 h-auto'} object-fit-cover`} />
       </section>
     </div>
   );
