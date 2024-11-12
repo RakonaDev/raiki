@@ -10,7 +10,6 @@ export function InicioRaiki() {
   const { scrollElemento } = useContext(ResponsiveContext);
 
   useEffect(() => {
-    console.log(sessionStorage.getItem('elemento'))
     if(sessionStorage.getItem('elemento')) {
       scrollElemento(`#${sessionStorage.getItem('elemento')}`)
     }
@@ -27,7 +26,7 @@ export function InicioRaiki() {
       <div id="servicios" className="pt-2">
         <Servicios />
       </div>
-      <div id="proyectos" className="pt-4">
+      <div id="proyectos" className="pt-4 bg-light">
         <Proyectos />
       </div>
     </>

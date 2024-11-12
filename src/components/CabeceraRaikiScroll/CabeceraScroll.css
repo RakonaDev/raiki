@@ -1,10 +1,11 @@
 .cabecera-scroll{
   position: fixed;
   background-color: black;
-  width: 80%;
-  height: 60px;
+  height: 47px;
+  width: 100%;
+  max-width: 1100px;
   left: 50%;
-  margin-left: -40%;
+  transform: translateX(-50%);
   bottom: 10px;
   z-index: 40;
   border-radius: 20px;
@@ -27,7 +28,7 @@
     border-radius: 12px;
     background-color: black;
     width: 250px;
-    height: 45px;
+    height: 35px;
     transition: all 0.6s ease;
     cursor: pointer;
 
@@ -39,9 +40,9 @@
 
 @keyframes show-bottom {
   from{
-    transform: translateY(100px);
+    transform: translate(-50%, 100%);
   }
   to{
-    transform: translateY(0px);
+    transform: translate(-50%, 0%);
   }
 }

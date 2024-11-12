@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   background-color: white;
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
   animation: show-header 0.8s alternate;
 }
 
@@ -39,7 +39,7 @@
 .cabeceraScroll-container .redes-container{
   position: relative;
   display: flex;
-  justify-content: space-evenly;
+  gap: 20px;
   width: 280px;
   transform: translateY(7.5px);
 

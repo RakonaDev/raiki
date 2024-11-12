@@ -8,6 +8,7 @@ import { InicioRaiki } from "./routes/InicioRaiki/InicioRaiki";
 import { ProfitTrading } from "./routes/ProfitTrading/ProfitTrading";
 import KamStudio from "./routes/KamStudio/KamStudio";
 import SaldanaGroup from "./routes/SaldanaGroup/SaldanaGroup";
+import { BotonForm } from "./components/BotonForm/BotonForm";
 
 function App() {
   const { windowScroll, windowWidth } = useContext(ResponsiveContext);
@@ -23,6 +24,7 @@ function App() {
       ) : (
         <Cabecera />
       )}
+      <BotonForm/>
       <div className="dividor" id="dividor"></div>
       <Routes>
         <Route path="/" element={<InicioRaiki />} />

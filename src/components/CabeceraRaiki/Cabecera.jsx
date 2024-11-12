@@ -13,8 +13,8 @@ function Cabecera() {
 
   return (
     <header className="cabeceraScroll-container fixed-top" id="header-container">
-      <nav className={ windowWidth <= 1050 ? "nav-cabecera responsive" : "nav-cabecera" }>
-        <div className={windowWidth <= 1050 ? "logo-container ms-5" : "logo-container"}>
+      <nav className={ windowWidth <= 1050 ? "nav-cabecera responsive container-xxl" : "nav-cabecera container-xxl" }>
+        <div className={windowWidth <= 1050 ? "logo-container ms-4" : "logo-container"}>
           <img src={raikiLogo} alt="raikiLogo" />
         </div>
         { windowWidth > 1050 ? <Nav/> : <NavResponsive width={windowWidth}/> }

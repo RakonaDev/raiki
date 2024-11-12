@@ -15,8 +15,8 @@ function Nosotros() {
 
   return (
     <>
-      <section className="nosotros-main w-100 ps-5 pe-5 pt-5 h-auto" id="nosotros">
-        <article className="cabecera-nosotros">
+      <section className="nosotros-main w-100 pt-5 h-auto" id="nosotros">
+        <article className="cabecera-nosotros container-xxl">
           <p className="fs-1 fw-medium">Nuestra Historia</p>
           <p className="fs-6">
             Trasforma tu Imaginación en una Aventura: Únete a Nuestro Viaje
@@ -34,7 +34,7 @@ function Nosotros() {
             creación de marcas impactantes en un mundo cambiante.
           </p>
         </article>
-        <section className="team-raiki w-100">
+        <section className="team-raiki w-100 container-xxl">
           <p className="fs-1 fw-medium">Team Raiki</p>
           <ul className="lista-raiki mt-5">
             <Personaje
@@ -59,16 +59,16 @@ function Nosotros() {
             />
           </ul>
         </section>
-        <section className="socios-section w-100 h-auto pb-5 pt-5">
+        <section className="socios-section w-100 container-xxl h-auto pb-5 pt-5">
           <p className="fs-1 fw-medium mb-5">Socios Estratégicos</p>
           <main className="socios-container d-flex gap-4 justify-content-evenly flex-wrap">
-            <a href="#" className="socio-item">
+            <a className="socio-item my-auto">
               <img src={Zaitex} alt="zaitex" />
             </a>
-            <a href="#" className="socio-item">
+            <a className="socio-item my-auto">
               <img src={Profit} alt="profit trading" />
             </a>
-            <a href="#" className="socio-item">
+            <a className="socio-item my-auto">
               <img src={Club} alt="club de las 5am" />
             </a>
           </main>

@@ -21,7 +21,7 @@ function Inicio() {
       speed: 5,
       smartSpeed: true,
       autoplay: true,
-      margin: 0
+      margin: 0,
     });
   }, []);
 
@@ -45,35 +45,36 @@ function Inicio() {
         <div className="marca-titulo container d-flex justify-content-center">
           <p className="fs-1 mt-5 text-black">Marcas que redefinen Ambientes</p>
         </div>
-        <article className="marca-article w-100 mt-5">
-          <div className="marca">
-            <div className="cabecera-marca d-flex justify-content-center align-items-center">
-              <Marca1Icon />
+        <article className="w-100 mt-5">
+          <div className="container-xxl marca-article">
+            <div className="marca">
+              <div className="cabecera-marca d-flex justify-content-center align-items-center">
+                <Marca1Icon />
+              </div>
+              <div className="cuerpo-marca mt-4">
+                <p>Creación de Identidad y Experiencia de Marca</p>
+              </div>
             </div>
-            <div className="cuerpo-marca mt-4">
-              <p>Creación de Identidad y Experiencia de Marca</p>
+            <div className="marca">
+              <div className="cabecera-marca d-flex justify-content-center align-items-center">
+                <Marca2Icon />
+              </div>
+              <div className="cuerpo-marca mt-4">
+                <p>Optimización del Espacio y Experiencia del Usuario</p>
+              </div>
             </div>
-          </div>
-          <div className="marca">
-            <div className="cabecera-marca d-flex justify-content-center align-items-center">
-              <Marca2Icon />
-            </div>
-            <div className="cuerpo-marca mt-4">
-              <p>Optimización del Espacio y Experiencia del Usuario</p>
-            </div>
-          </div>
-          <div className="marca">
-            <div className="cabecera-marca d-flex justify-content-center align-items-center">
-              <Marca3Icon />
-            </div>
-            <div className="cuerpo-marca mt-4">
-              <p>Comunicación Visual y Coherencia de Marca</p>
+            <div className="marca">
+              <div className="cabecera-marca d-flex justify-content-center align-items-center">
+                <Marca3Icon />
+              </div>
+              <div className="cuerpo-marca mt-4">
+                <p>Comunicación Visual y Coherencia de Marca</p>
+              </div>
             </div>
           </div>
         </article>
         <main className="w-100 h-auto proyectos-container">
           <div className="my-carousel">
-
             <div className="my-slide">
               <img
                 src={Picture1}

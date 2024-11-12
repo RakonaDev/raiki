@@ -3,10 +3,12 @@ import InstagramIcon from "../../iconos/Instagram";
 import TiktokIcon from "../../iconos/Tiktok";
 import YoutubeIcon from '../../iconos/Youtube';
 
+import PropTypes from "prop-types";
+
 function Redes(props) {
   return (
     <>
-      <ul className="redes-container d-flex justify-content-evenly">
+      <ul className="redes-container d-flex">
         <li className="red-container">
           <a href="https://www.facebook.com/raikide?locale=es_LA" className="red-item" target="_blank">
             <FacebookIcon color={props.color}/>
@@ -30,6 +32,10 @@ function Redes(props) {
       </ul>
     </>
   );
+}
+
+Redes.propTypes = {
+  color: PropTypes.string.isRequired
 }
 
 export default Redes;

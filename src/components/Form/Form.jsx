@@ -58,7 +58,7 @@ export function Form () {
         <textarea name="mensaje" id="mensaje" cols="30" rows="7" className="form-control mb-3" placeholder="Mensaje" required></textarea>
         <div className="d-flex justify-content-end gap-4 form-button-group">
           <button type="button" onClick={sendToWhatsapp} className="whats-btn">
-            <i className="fa-brands fa-whatsapp fs-5 text-black fw-bold"></i> 
+            <i className="fa-brands fa-whatsapp fs-5 text-white fw-bold me-1 my-auto"></i> 
             <span className='my-auto ms-2'>Enviar Datos al Whatsapp</span>
           </button>
           <button type="submit" onSubmit={submitToContacto} className="form-btn">Enviar Datos </button>

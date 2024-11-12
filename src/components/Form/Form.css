@@ -1,5 +1,7 @@
 .form-button-group .whats-btn {
   background-color: rgba(39, 161, 26, 1);
+  display: flex;
+  align-items: center;
   color: white;
   border: none;
   padding: 0.5rem;
@@ -25,6 +27,14 @@
 
 .form-button-group .form-btn:hover{
   background-color: rgba(50, 50, 50, 1);
+}
+
+.formContacto input{
+  background-color: rgba(255, 255, 255, 0.94);
+}
+
+.formContacto textarea{
+  background-color: rgba(255, 255, 255, 0.94);
 }
 
 textarea {
