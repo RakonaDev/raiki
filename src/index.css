@@ -27,3 +27,7 @@
   text-decoration: 0;
   list-style: none;
 }
+
+.container-xxl{
+  max-width: 1680px !important; 
+}
