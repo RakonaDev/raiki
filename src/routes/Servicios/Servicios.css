@@ -21,10 +21,19 @@
   width: 750px;
   border-radius: 38px;
   background-color: rgba(255, 96, 96, 0.9);
+  border: none;
 }
 
 .dialog::backdrop{
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog .formContacto input{
+  background-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.dialog .formContacto textarea{
+  background-color: rgba(255, 255, 255, 0.75) !important;
 }
 
 .agenda-item{
