@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Personaje(props) {
   return (
     <>
-      <li className='personaje-item'>
+      <li className='personaje-item' data-aos={props.animacion || 'fade-up'} data-aos-offset="200" data-aos-delay={props.delay || '50'}>
         <div className='personaje-cabecera'>
           <img src={props.imagen} alt="personaje-imagen" className='personaje-imagen' height='356' />
         </div>
@@ -20,7 +20,9 @@ function Personaje(props) {
 Personaje.propTypes = {
   imagen: PropTypes.string.isRequired,
   nombre: PropTypes.string.isRequired,
-  cargo: PropTypes.string.isRequired
+  cargo: PropTypes.string.isRequired,
+  animacion: PropTypes.string,
+  delay: PropTypes.string
 }
 
 export default Personaje

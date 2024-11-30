@@ -14,8 +14,16 @@ import Marca1Icon from "../../iconos/Marca1";
 import Marca2Icon from "../../iconos/Marca2";
 import Marca3Icon from "../../iconos/Marca3";
 import { useEffect } from "react";
+import AOS from 'aos'
 
 function Inicio() {
+
+  AOS.init({
+    duration: 700,
+    delay: 50,
+    offset: 50
+  })
+
   useEffect(() => {
     new ScrollCarousel(".my-carousel", {
       speed: 5,
@@ -32,7 +40,7 @@ function Inicio() {
         <div className="bola-chiquita izquierda"></div>
         <div className="bola-mediana izquierda"></div>
         <div className="bola-grande izquierda"></div>
-        <p className="fs-1 text-black">
+        <p className="fs-1 text-black" data-aos="fade-up">
           Creatividad e innovación en branding y diseño de interiores para
           experiencias únicas.
         </p>
@@ -43,11 +51,11 @@ function Inicio() {
       </section>
       <section className="marcas-container w-100">
         <div className="marca-titulo container d-flex justify-content-center">
-          <p className="fs-1 mt-5 text-black">Marcas que redefinen Ambientes</p>
+          <p className="fs-1 mt-5 text-black" data-aos="fade-left">Marcas que redefinen Ambientes</p> 
         </div>
         <article className="w-100 mt-5">
           <div className="container-xxl marca-article">
-            <div className="marca">
+            <div className="marca" data-aos="fade-up" data-aos-offset="100">
               <div className="cabecera-marca d-flex justify-content-center align-items-center">
                 <Marca1Icon />
               </div>
@@ -55,7 +63,7 @@ function Inicio() {
                 <p>Creación de Identidad y Experiencia de Marca</p>
               </div>
             </div>
-            <div className="marca">
+            <div className="marca" data-aos="fade-up" data-aos-offset="150" data-aos-delay="100">
               <div className="cabecera-marca d-flex justify-content-center align-items-center">
                 <Marca2Icon />
               </div>
@@ -63,7 +71,7 @@ function Inicio() {
                 <p>Optimización del Espacio y Experiencia del Usuario</p>
               </div>
             </div>
-            <div className="marca">
+            <div className="marca" data-aos="fade-up" data-aos-offset="200" data-aos-delay="150">
               <div className="cabecera-marca d-flex justify-content-center align-items-center">
                 <Marca3Icon />
               </div>

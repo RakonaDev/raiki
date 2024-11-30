@@ -4,8 +4,13 @@ import Servicios from "../Servicios/Servicios";
 import Proyectos from "../Proyectos/Proyectos";
 import { useContext, useEffect } from "react";
 import { ResponsiveContext } from "../../context/Responsive";
+import Aos from "aos";
 
 export function InicioRaiki() {
+  Aos.init({
+    once: false,
+    offset: 200,
+  });
 
   const { scrollElemento } = useContext(ResponsiveContext);
 

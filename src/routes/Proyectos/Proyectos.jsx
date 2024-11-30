@@ -14,7 +14,7 @@ function Proyectos() {
   return (
     <>
       <main className='p-5 proyectos-main bg-light flex-row gap-2 font-k2d d-flex flex-wrap justify-content-evenly w-100 container-xxl'>
-        <div className={`parrafo-proyecto h-auto ${windowWidth < 1050 ? 'w-100' : ''}`}>
+        <div className={`parrafo-proyecto h-auto ${windowWidth < 1050 ? 'w-100' : ''}`} data-aos="fade-right" data-aos-offset="200">
           <p className={`fs-2 fw-medium ${windowWidth < 1050 ? 'text-center' : ''}`}>Proyectos</p>
           <p className='fs-5'>Nuestra experiencia en proyectos refleja nuestra habilidad para abordar una variedad de desafíos empresariales e institucionales. Este enfoque nos ha posicionado como una opción destacada en el ámbito del branding y el diseño de interiores en Lima y en el Perú, con un fuerte compromiso hacia la generación de resultados empresariales significativos.</p>
         </div>

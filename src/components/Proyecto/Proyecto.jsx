@@ -9,7 +9,7 @@ function Proyecto({ url,img, categorias, titulo }) {
 
   return (
     <>
-      <Link to={url} className={`proyecto-item ${windowWidth < 950 ? 'w-100 h-auto' : ''}`}>
+      <Link to={url} className={`proyecto-item ${windowWidth < 950 ? 'w-100 h-auto' : ''}`} data-aos="flip-up" data-aos-offset="300">
         <div className={`imagen-proyecto  ${windowWidth < 950 ? 'w-100 h-auto' : ''}`}>
           <img src={img} alt="proyecto" className="w-100"/>
         </div>

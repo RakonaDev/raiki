@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import ResponsiveContextProvider from "./context/Responsive.jsx";
 import { BrowserRouter } from "react-router-dom";
+import 'aos/dist/aos.css';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>

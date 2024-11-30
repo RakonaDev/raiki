@@ -1,7 +1,6 @@
 import Servicio from "../../components/Servicio/Servicio";
 
 import Servicio1 from "../../assets/Servicio1.svg";
-/*import Servicio2 from "../../assets/Servicio2.svg";*/
 import Servicio3 from "../../assets/Servicio3.svg";
 import Servicio4 from "../../assets/Servicio4.svg";
 
@@ -47,11 +46,11 @@ function Servicios() {
       </div>
       <article className="bg-servicios pb-5 w-100 h-auto font-k2d">
         <div className="container-xxl bg-servicios">
-          <p className="fs-1 text-black fw-medium text-center pb-5 pt-5">
+          <p className="fs-1 text-black fw-medium text-center pb-5 pt-5" data-aos="fade-up" data-aos-offset="50">
             Nosotros te Asesoramos
           </p>
           <div className="w-100 d-flex justify-content-evenly gap-4 flex-wrap">
-            <div className="w-container d-flex flex-column justify-content-center">
+            <div className="w-container d-flex flex-column justify-content-center" data-aos="fade-right" data-aos-offset="100">
               <p className="fs-4 fw-bold text-center">
                 Reconocimiento de Marca
               </p>
@@ -60,10 +59,10 @@ function Servicios() {
                 inmediato por parte de los clientes.
               </p>
             </div>
-            <div className="asesor-container">
+            <div className="asesor-container" data-aos="flip-up" data-aos-offset="100" data-aos-duration="1200">
               <img src={Asesor} alt="" className="asesor-item" />
             </div>
-            <div className="w-container d-flex flex-column justify-content-center">
+            <div className="w-container d-flex flex-column justify-content-center" data-aos="fade-left" data-aos-offset="100">
               <p className="fs-4 fw-bold text-center">Confianza y Lealtad</p>
               <p className="fs-5 text-center">
                 Una marca bien construida no solo crea una impresión visual,
@@ -71,7 +70,7 @@ function Servicios() {
               </p>
             </div>
           </div>
-          <p className="fs-1 text-black text-center fw-medium mt-5 mb-5">
+          <p className="fs-1 text-black text-center fw-medium mt-5 mb-5" data-aos="fade-up" data-aos-offset="50">
             Agenda una cita con nosotros
           </p>
           <div className="d-flex w-100 justify-content-evenly flex-wrap row-gap-5">
@@ -89,7 +88,7 @@ function Servicios() {
                 <Form />
               </dialog>
             </div>
-            <article className="agenda-item p-5">
+            <article className="agenda-item p-5" data-aos="fade-right" data-aos-offset="200">
               <h4 className="fs-3 text-black text-center">
                 ¿Necesitas que te guiemos?
               </h4>
@@ -112,7 +111,7 @@ function Servicios() {
                 />
               </div>
             </article>
-            <article className="agenda-item p-5">
+            <article className="agenda-item p-5" data-aos="fade-left" data-aos-offset="200">
               <h4 className="fs-3 text-black text-center">
                 ¿Ya tienes claro que necesitas?
               </h4>

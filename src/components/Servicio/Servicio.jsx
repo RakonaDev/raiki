@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 function Servicio({ imagen, titulo, descripcion }) {
   return (
     <>
-      <li className="servicio">
+      <li className="servicio" data-aos="fade-up" data-aos-delay="0" data-aos-offset="150">
         <div className="header-servicio w-100 d-flex justify-content-center align-items-center">
           <img src={imagen} alt="servicio" className="imagen-servicio"/>
         </div>
